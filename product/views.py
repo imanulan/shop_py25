@@ -110,6 +110,14 @@ def get_hello(request):
     return Response('HELLO!!!')
 
 
+from django.views.generic import ListView
+
+class ProductList(ListView):
+    model = Product
+    template_name = 'product_list.html'
+    context_object_name = 'products'
+
+
 
 
 
